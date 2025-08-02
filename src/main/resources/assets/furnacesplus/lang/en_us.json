@@ -6,5 +6,8 @@
   "block.furnacesplus.foundry": "Foundry",
   "block.furnacesplus.oven": "Oven",
 
-  "gui.furnacesplus.glass_kiln": "Glass Kiln"
+  "gui.furnacesplus.glass_kiln": "Glass Kiln",
+  "gui.furnacesplus.kiln": "Kiln",
+  "gui.furnacesplus.foundry": "Foundry",
+  "gui.furnacesplus.oven": "Oven"
 }

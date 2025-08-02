@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "furnacesplus:block/oven_front_on",
+    "south": "furnacesplus:block/oven_sides",
+    "east": "furnacesplus:block/oven_sides",
+    "west": "furnacesplus:block/oven_sides",
+    "up": "furnacesplus:block/bricks_top",
+    "down": "furnacesplus:block/bottom",
+    "particle": "furnacesplus:block/oven_front"
+  }
+}

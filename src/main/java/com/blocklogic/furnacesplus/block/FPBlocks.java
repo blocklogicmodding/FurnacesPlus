@@ -1,7 +1,10 @@
 package com.blocklogic.furnacesplus.block;
 
 import com.blocklogic.furnacesplus.FurnacesPlus;
+import com.blocklogic.furnacesplus.block.custom.FoundryBlock;
 import com.blocklogic.furnacesplus.block.custom.GlassKilnBlock;
+import com.blocklogic.furnacesplus.block.custom.KilnBlock;
+import com.blocklogic.furnacesplus.block.custom.OvenBlock;
 import com.blocklogic.furnacesplus.item.FPItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -22,27 +25,31 @@ public class FPBlocks {
                     .strength(3.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(GlassKilnBlock.LIT) ? 13 : 0)
             ));
 
     public static final DeferredBlock<Block> KILN = registerBlock("kiln",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new KilnBlock(BlockBehaviour.Properties.of()
                     .strength(3.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(GlassKilnBlock.LIT) ? 13 : 0)
             ));
 
     public static final DeferredBlock<Block> FOUNDRY = registerBlock("foundry",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new FoundryBlock(BlockBehaviour.Properties.of()
                     .strength(3.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(GlassKilnBlock.LIT) ? 13 : 0)
             ));
 
     public static final DeferredBlock<Block> OVEN = registerBlock("oven",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new OvenBlock(BlockBehaviour.Properties.of()
                     .strength(3.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)
+                    .lightLevel(state -> state.getValue(GlassKilnBlock.LIT) ? 13 : 0)
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,lit=false": {
       "model": "furnacesplus:block/glass_kiln"
     },
-    "facing=south": {
+    "facing=north,lit=true": {
+      "model": "furnacesplus:block/glass_kiln_on"
+    },
+    "facing=south,lit=false": {
       "model": "furnacesplus:block/glass_kiln",
       "y": 180
     },
-    "facing=east": {
+    "facing=south,lit=true": {
+      "model": "furnacesplus:block/glass_kiln_on",
+      "y": 180
+    },
+    "facing=east,lit=false": {
       "model": "furnacesplus:block/glass_kiln",
       "y": 90
     },
-    "facing=west": {
+    "facing=east,lit=true": {
+      "model": "furnacesplus:block/glass_kiln_on",
+      "y": 90
+    },
+    "facing=west,lit=false": {
       "model": "furnacesplus:block/glass_kiln",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "furnacesplus:block/glass_kiln_on",
       "y": 270
     }
   }

@@ -1,18 +1,18 @@
 package com.blocklogic.furnacesplus.container.screen;
 
 import com.blocklogic.furnacesplus.FurnacesPlus;
-import com.blocklogic.furnacesplus.container.menu.GlassKilnMenu;
+import com.blocklogic.furnacesplus.container.menu.FurnaceMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class GlassKilnScreen extends AbstractContainerScreen<GlassKilnMenu> {
+public class FurnaceScreen extends AbstractContainerScreen<FurnaceMenu> {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
             FurnacesPlus.MODID, "textures/gui/furnace_gui.png");
 
-    public GlassKilnScreen(GlassKilnMenu menu, Inventory playerInventory, Component title) {
+    public FurnaceScreen(FurnaceMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);
         this.imageWidth = 176;
         this.imageHeight = 172;
@@ -31,6 +31,17 @@ public class GlassKilnScreen extends AbstractContainerScreen<GlassKilnMenu> {
         int y = (height - imageHeight) / 2;
 
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+
+        if (menu.isBurning()) {
+            int burnProgress = menu.getBurnProgress();
+            guiGraphics.blit(TEXTURE, x + 45, y + 37 + (14 - burnProgress),
+                    176, 14 - burnProgress, 14, burnProgress);
+        }
+
+        int cookProgress = menu.getCookProgress();
+        if (cookProgress > 0) {
+            guiGraphics.blit(TEXTURE, x + 86, y + 38, 176, 14, cookProgress, 11);
+        }
     }
 
     @Override
@@ -38,5 +49,21 @@ public class GlassKilnScreen extends AbstractContainerScreen<GlassKilnMenu> {
         renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         super.render(guiGraphics, mouseX, mouseY, partialTick);
         renderTooltip(guiGraphics, mouseX, mouseY);
+    }
+
+    @Override
+    protected void renderTooltip(GuiGraphics guiGraphics, int x, int y) {
+        super.renderTooltip(guiGraphics, x, y);
+
+        int relX = x - leftPos;
+        int relY = y - topPos;
+
+        if (relX >= 86 && relX <= 108 && relY >= 38 && relY <= 49) {
+            int cookProgress = menu.getCookProgress();
+            int maxProgress = 22;
+            int percentage = maxProgress > 0 ? (cookProgress * 100) / maxProgress : 0;
+            guiGraphics.renderTooltip(this.font,
+                    Component.literal(percentage + "%"), x, y);
+        }
     }
 }

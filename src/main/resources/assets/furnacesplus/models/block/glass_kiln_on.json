@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "furnacesplus:block/glass_kiln_front_on",
+    "south": "furnacesplus:block/glass_kiln_sides",
+    "east": "furnacesplus:block/glass_kiln_sides",
+    "west": "furnacesplus:block/glass_kiln_sides",
+    "up": "furnacesplus:block/bricks_top",
+    "down": "furnacesplus:block/bottom",
+    "particle": "furnacesplus:block/glass_kiln_front"
+  }
+}

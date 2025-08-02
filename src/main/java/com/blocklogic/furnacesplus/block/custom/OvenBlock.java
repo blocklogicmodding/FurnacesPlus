@@ -34,12 +34,12 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
-public class GlassKilnBlock extends BaseEntityBlock {
+public class OvenBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
-    public static final MapCodec<GlassKilnBlock> CODEC = simpleCodec(GlassKilnBlock::new);
+    public static final MapCodec<OvenBlock> CODEC = simpleCodec(OvenBlock::new);
 
-    public GlassKilnBlock(Properties properties) {
+    public OvenBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
@@ -71,7 +71,7 @@ public class GlassKilnBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new FurnaceBlockEntity(blockPos, blockState, FurnaceType.GLASS_KILN);
+        return new FurnaceBlockEntity(blockPos, blockState, FurnaceType.OVEN);
     }
 
     @Nullable
@@ -81,7 +81,7 @@ public class GlassKilnBlock extends BaseEntityBlock {
             return null;
         }
 
-        return createTickerHelper(blockEntityType, FPBlockEntities.GLASS_KILN_BE.get(),
+        return createTickerHelper(blockEntityType, FPBlockEntities.OVEN_BE.get(),
                 (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
     }
 
@@ -101,7 +101,7 @@ public class GlassKilnBlock extends BaseEntityBlock {
                                               Player player, InteractionHand hand, BlockHitResult hitResult) {
         if(level.getBlockEntity(pos) instanceof FurnaceBlockEntity furnaceBlockEntity) {
             if(!level.isClientSide()) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(furnaceBlockEntity, Component.translatable("gui.furnacesplus.glass_kiln")), pos);
+                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(furnaceBlockEntity, Component.translatable("gui.furnacesplus.oven")), pos);
                 return ItemInteractionResult.SUCCESS;
             }
         }
