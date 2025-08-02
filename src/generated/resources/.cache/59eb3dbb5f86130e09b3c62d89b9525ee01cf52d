@@ -1,5 +1,4 @@
-// 1.21.1	2025-08-02T07:04:33.8576866	Loot Tables
+// 1.21.1	2025-08-02T11:36:18.9801223	Loot Tables
 ece1862dc65d2645990500830ceb686225a0450d data/furnacesplus/loot_table/blocks/foundry.json
 157784d66d733de9b6f8f2ea842e0161402b0734 data/furnacesplus/loot_table/blocks/glass_kiln.json
 bd0087acfaef2c4f3d4ae331823c5d6247848b13 data/furnacesplus/loot_table/blocks/kiln.json
-67f5b05eab100a5274958cacb0bda7c1c2bffaaa data/furnacesplus/loot_table/blocks/oven.json

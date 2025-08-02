@@ -4,7 +4,6 @@ import com.blocklogic.furnacesplus.FurnacesPlus;
 import com.blocklogic.furnacesplus.block.custom.FoundryBlock;
 import com.blocklogic.furnacesplus.block.custom.GlassKilnBlock;
 import com.blocklogic.furnacesplus.block.custom.KilnBlock;
-import com.blocklogic.furnacesplus.block.custom.OvenBlock;
 import com.blocklogic.furnacesplus.item.FPItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -38,14 +37,6 @@ public class FPBlocks {
 
     public static final DeferredBlock<Block> FOUNDRY = registerBlock("foundry",
             () -> new FoundryBlock(BlockBehaviour.Properties.of()
-                    .strength(3.0F)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.STONE)
-                    .lightLevel(state -> state.getValue(GlassKilnBlock.LIT) ? 13 : 0)
-            ));
-
-    public static final DeferredBlock<Block> OVEN = registerBlock("oven",
-            () -> new OvenBlock(BlockBehaviour.Properties.of()
                     .strength(3.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)

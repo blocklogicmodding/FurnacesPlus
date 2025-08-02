@@ -21,7 +21,6 @@ public class FPBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(FPBlocks.GLASS_KILN.get())
                 .add(FPBlocks.KILN.get())
-                .add(FPBlocks.FOUNDRY.get())
-                .add(FPBlocks.OVEN.get());
+                .add(FPBlocks.FOUNDRY.get());
     }
 }

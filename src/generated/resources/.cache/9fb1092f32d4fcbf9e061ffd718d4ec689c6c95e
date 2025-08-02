@@ -1,9 +1,7 @@
-// 1.21.1	2025-08-02T07:16:32.7630121	Recipes
-63b319b6042d4ed56e00fe1941f3df4153e06aaa data/furnacesplus/advancement/recipes/misc/foundry.json
+// 1.21.1	2025-08-02T11:36:18.9826016	Recipes
+fdf8bfed655e69d0b64f6ee60756e3a595c2b086 data/furnacesplus/advancement/recipes/misc/foundry.json
 a3c1f35b58fa7168cf6eb5bdd004447b6fbd2ed8 data/furnacesplus/advancement/recipes/misc/glass_kiln.json
 510420affa2e03c9d8f70bcdc1043654418d8c54 data/furnacesplus/advancement/recipes/misc/kiln.json
-f10cc87862988fe2753e9074642d85887c19488b data/furnacesplus/advancement/recipes/misc/oven.json
-4e06fe4a71d8dae1ac1ebf560067dea070815ae6 data/furnacesplus/recipe/foundry.json
-81b301277e3787224ec9010b177ce7783df631fc data/furnacesplus/recipe/glass_kiln.json
-78b8fdcd40d9637fdc7337b94fc95f5ce4245409 data/furnacesplus/recipe/kiln.json
-b033df3327cad0793087b93c988176bd0061b025 data/furnacesplus/recipe/oven.json
+5dd5abf684324b43b26f4f0ded8481bee64ce682 data/furnacesplus/recipe/foundry.json
+e588233842c36dcb55abc60014e9d1f9299f84c0 data/furnacesplus/recipe/glass_kiln.json
+9569d9aae6074f557d14660efc7db7050bd33856 data/furnacesplus/recipe/kiln.json

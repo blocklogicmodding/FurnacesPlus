@@ -3,7 +3,6 @@ package com.blocklogic.furnacesplus.entity.custom;
 import com.blocklogic.furnacesplus.block.custom.FoundryBlock;
 import com.blocklogic.furnacesplus.block.custom.GlassKilnBlock;
 import com.blocklogic.furnacesplus.block.custom.KilnBlock;
-import com.blocklogic.furnacesplus.block.custom.OvenBlock;
 import com.blocklogic.furnacesplus.config.FPConfig;
 import com.blocklogic.furnacesplus.container.menu.FurnaceMenu;
 import com.blocklogic.furnacesplus.entity.FPBlockEntities;
@@ -124,7 +123,6 @@ public class FurnaceBlockEntity extends BlockEntity implements MenuProvider {
             case GLASS_KILN -> FPBlockEntities.GLASS_KILN_BE.get();
             case KILN -> FPBlockEntities.KILN_BE.get();
             case FOUNDRY -> FPBlockEntities.FOUNDRY_BE.get();
-            case OVEN -> FPBlockEntities.OVEN_BE.get();
         };
     }
 
@@ -320,7 +318,6 @@ public class FurnaceBlockEntity extends BlockEntity implements MenuProvider {
             case GLASS_KILN -> GlassKilnBlock.updateBlockState(level, pos, lit);
             case KILN -> KilnBlock.updateBlockState(level, pos, lit);
             case FOUNDRY -> FoundryBlock.updateBlockState(level, pos, lit);
-            case OVEN -> OvenBlock.updateBlockState(level, pos, lit);
         }
     }
 
@@ -338,11 +335,11 @@ public class FurnaceBlockEntity extends BlockEntity implements MenuProvider {
     public static void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FPBlockEntities.GLASS_KILN_BE.get(),
                 (blockEntity, side) -> blockEntity.getItemHandler(side));
+
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FPBlockEntities.KILN_BE.get(),
                 (blockEntity, side) -> blockEntity.getItemHandler(side));
+
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FPBlockEntities.FOUNDRY_BE.get(),
-                (blockEntity, side) -> blockEntity.getItemHandler(side));
-        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FPBlockEntities.OVEN_BE.get(),
                 (blockEntity, side) -> blockEntity.getItemHandler(side));
     }
 }

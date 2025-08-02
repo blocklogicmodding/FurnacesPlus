@@ -8,14 +8,17 @@
     "F": {
       "item": "minecraft:furnace"
     },
-    "S": {
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "X": {
       "item": "minecraft:smooth_stone"
     }
   },
   "pattern": [
     "BBB",
-    "BFB",
-    "SSS"
+    "GFG",
+    "XXX"
   ],
   "result": {
     "count": 1,

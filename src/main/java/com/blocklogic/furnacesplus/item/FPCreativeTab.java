@@ -14,14 +14,13 @@ import java.util.function.Supplier;
 public class FPCreativeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FurnacesPlus.MODID);
 
-    public static final Supplier<CreativeModeTab> FLOWTECH = CREATIVE_MODE_TAB.register("flowtech",
+    public static final Supplier<CreativeModeTab> FURNACESPLUS = CREATIVE_MODE_TAB.register("furnacesplus",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FPBlocks.GLASS_KILN.get()))
                     .title(Component.translatable("creativetab.furnacesplus"))
                     .displayItems((ItemDisplayParameters, output) -> {
                         output.accept(FPBlocks.GLASS_KILN);
                         output.accept(FPBlocks.KILN);
                         output.accept(FPBlocks.FOUNDRY);
-                        output.accept(FPBlocks.OVEN);
                     }).build());
 
     public static void register (IEventBus eventBus) {

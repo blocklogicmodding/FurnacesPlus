@@ -19,7 +19,6 @@ public class FPLootTableProvider extends BlockLootSubProvider {
         dropSelf(FPBlocks.GLASS_KILN.get());
         dropSelf(FPBlocks.KILN.get());
         dropSelf(FPBlocks.FOUNDRY.get());
-        dropSelf(FPBlocks.OVEN.get());
     }
 
     @Override

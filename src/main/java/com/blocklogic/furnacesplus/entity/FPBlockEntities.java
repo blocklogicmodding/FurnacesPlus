@@ -30,11 +30,6 @@ public class FPBlockEntities {
                     (pos, state) -> new FurnaceBlockEntity(pos, state, FurnaceType.FOUNDRY),
                     FPBlocks.FOUNDRY.get()).build(null));
 
-    public static final Supplier<BlockEntityType<FurnaceBlockEntity>> OVEN_BE =
-            BLOCK_ENTITIES.register("oven_be", () -> BlockEntityType.Builder.of(
-                    (pos, state) -> new FurnaceBlockEntity(pos, state, FurnaceType.OVEN),
-                    FPBlocks.OVEN.get()).build(null));
-
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

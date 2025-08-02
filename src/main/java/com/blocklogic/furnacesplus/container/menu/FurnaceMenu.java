@@ -59,7 +59,6 @@ public class FurnaceMenu extends AbstractContainerMenu {
             case GLASS_KILN -> FPMenuTypes.GLASS_KILN_MENU.get();
             case KILN -> FPMenuTypes.KILN_MENU.get();
             case FOUNDRY -> FPMenuTypes.FOUNDRY_MENU.get();
-            case OVEN -> FPMenuTypes.OVEN_MENU.get();
         };
     }
 
@@ -176,7 +175,6 @@ public class FurnaceMenu extends AbstractContainerMenu {
             case GLASS_KILN -> FPBlocks.GLASS_KILN.get();
             case KILN -> FPBlocks.KILN.get();
             case FOUNDRY -> FPBlocks.FOUNDRY.get();
-            case OVEN -> FPBlocks.OVEN.get();
         };
 
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),

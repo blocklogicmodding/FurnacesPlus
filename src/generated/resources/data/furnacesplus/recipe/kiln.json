@@ -8,14 +8,17 @@
     "F": {
       "item": "minecraft:furnace"
     },
-    "T": {
-      "tag": "minecraft:terracotta"
+    "S": {
+      "tag": "c:stones"
+    },
+    "X": {
+      "item": "minecraft:smooth_stone"
     }
   },
   "pattern": [
     "BBB",
-    "BFB",
-    "TTT"
+    "SFS",
+    "XXX"
   ],
   "result": {
     "count": 1,

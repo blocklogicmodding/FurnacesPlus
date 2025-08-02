@@ -10,8 +10,7 @@ import net.minecraft.world.level.Level;
 public enum FurnaceType {
     GLASS_KILN("glass_kiln"),
     KILN("kiln"),
-    FOUNDRY("foundry"),
-    OVEN("oven");
+    FOUNDRY("foundry");
 
     private final String name;
 
@@ -28,14 +27,13 @@ public enum FurnaceType {
             case GLASS_KILN -> input.is(Items.SAND) || input.is(Items.RED_SAND);
             case KILN -> isStoneSmeltingRecipe(input, level);
             case FOUNDRY -> isMetalSmeltingRecipe(input, level);
-            case OVEN -> isFoodSmeltingRecipe(input, level);
         };
     }
 
     public ItemStack getSmeltingResult(ItemStack input, Level level) {
         return switch (this) {
             case GLASS_KILN -> getGlassResult(input);
-            case KILN, FOUNDRY, OVEN -> getVanillaSmeltingResult(input, level);
+            case KILN, FOUNDRY -> getVanillaSmeltingResult(input, level);
         };
     }
 

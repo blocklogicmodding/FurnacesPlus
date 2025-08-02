@@ -3,22 +3,22 @@
   "category": "misc",
   "key": {
     "B": {
-      "item": "minecraft:iron_block"
+      "item": "minecraft:bricks"
     },
     "F": {
-      "item": "minecraft:furnace"
+      "item": "minecraft:blast_furnace"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     },
-    "X": {
+    "S": {
       "item": "minecraft:smooth_stone"
     }
   },
   "pattern": [
-    "XXX",
-    "XFX",
-    "IBI"
+    "BBB",
+    "IFI",
+    "SSS"
   ],
   "result": {
     "count": 1,

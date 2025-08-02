@@ -71,7 +71,6 @@ public class FurnacesPlus {
             event.register(FPMenuTypes.GLASS_KILN_MENU.get(), FurnaceScreen::new);
             event.register(FPMenuTypes.KILN_MENU.get(), FurnaceScreen::new);
             event.register(FPMenuTypes.FOUNDRY_MENU.get(), FurnaceScreen::new);
-            event.register(FPMenuTypes.OVEN_MENU.get(), FurnaceScreen::new);
         }
 
 
