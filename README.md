@@ -1,25 +1,42 @@
 
-Installation information
-=======
+# Furnaces+
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+![FP Bannerr](https://deonjonker.com/blm/fp/fp_banner.png)
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+_Enhanced smelting with three specialized, vanilla+ balanced furnaces, each designed to handle specific material types efficiently._
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+----------
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Glass Kiln - for smelting sand into glass
+
+## Kiln - for firing clay, stone, netherrack, etc
+
+## Foundry - for smelting metals
+
+## Automation
+
+Same as vanilla furnaces:
+- Fuel into the back and top
+- Smetlables into sides and front
+- Output from the bottom
+
+
+### Credit
+Textures used in this mod were adapted from  **"Unused Minecraft Textures" by Malcolm Riley**  ([GitHub Repository](https://github.com/malcolmriley/unused-textures))  
+Licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+Modifications were made to some of the original assets.
+
+## License
+
+All rights reserved. This mod is protected by copyright and may not be redistributed or modified without explicit permission.
+
+**Permitted Uses:**
+
+-   Inclusion in modpacks (public or private)
+-   Content creation (videos, streams, reviews, etc.)
+
+----------
+
+[**Issue Tracker**](https://github.com/blocklogicmodding/FurnacesPlus/issues) | [**BLM Discord**](https://discord.gg/YtdA3AMqsXe)
