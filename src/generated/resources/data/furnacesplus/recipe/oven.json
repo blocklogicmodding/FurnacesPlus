@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bricks"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "S": {
+      "tag": "minecraft:stone_bricks"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BFB",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "furnacesplus:oven"
+  }
+}

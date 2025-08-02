@@ -1,0 +1,29 @@
+package com.blocklogic.furnacesplus.datagen.custom;
+
+import com.blocklogic.furnacesplus.block.FPBlocks;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.block.Block;
+
+import java.util.Set;
+
+public class FPLootTableProvider extends BlockLootSubProvider {
+    public FPLootTableProvider(HolderLookup.Provider registries) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
+    }
+
+    @Override
+    protected void generate() {
+        dropSelf(FPBlocks.GLASS_KILN.get());
+        dropSelf(FPBlocks.KILN.get());
+        dropSelf(FPBlocks.FOUNDRY.get());
+        dropSelf(FPBlocks.OVEN.get());
+    }
+
+    @Override
+    protected Iterable<Block> getKnownBlocks() {
+        return FPBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+    }
+}

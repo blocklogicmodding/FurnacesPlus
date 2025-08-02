@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bricks"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BFB",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "furnacesplus:glass_kiln"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "furnacesplus:block/glass_kiln"
+    },
+    "facing=south": {
+      "model": "furnacesplus:block/glass_kiln",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "furnacesplus:block/glass_kiln",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "furnacesplus:block/glass_kiln",
+      "y": 270
+    }
+  }
+}
