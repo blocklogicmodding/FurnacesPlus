@@ -1,24 +1,22 @@
 
 # Furnaces+
 
-![FP Bannerr](https://deonjonker.com/blm/fp/fp_banner.png)
+![FP Banner](https://deonjonker.com/blm/fp/fp_banner.png)
 
 _Enhanced smelting with three specialized, vanilla+ balanced furnaces, each designed to handle specific material types efficiently._
 
 ----------
 
 
-## Glass Kiln - for smelting sand into glass
-
-## Kiln - for firing clay, stone, netherrack, etc
-
-## Foundry - for smelting metals
+### **Glass Kiln** - for smelting sand into glass
+### Kiln - for firing clay, stone, netherrack, etc
+### Foundry - for smelting metals
 
 ## Automation
 
-Same as vanilla furnaces:
+Similar to vanilla furnaces:
 - Fuel into the back and top
-- Smetlables into sides and front
+- Smetlables into sides and front (excluding the back)
 - Output from the bottom
 
 
