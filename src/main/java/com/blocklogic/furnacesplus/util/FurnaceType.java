@@ -67,11 +67,6 @@ public enum FurnaceType {
                 (hasVanillaSmeltingRecipe(input, level) && isMetalCategory(input));
     }
 
-    private boolean isFoodSmeltingRecipe(ItemStack input, Level level) {
-        return input.getFoodProperties(null) != null || input.is(Items.KELP) || input.is(Items.WET_SPONGE) ||
-                (hasVanillaSmeltingRecipe(input, level) && input.getFoodProperties(null) != null);
-    }
-
     private boolean hasVanillaSmeltingRecipe(ItemStack input, Level level) {
         var recipeInput = new SingleRecipeInput(input);
         return level.getRecipeManager()
@@ -89,6 +84,7 @@ public enum FurnaceType {
     private boolean isMetalCategory(ItemStack input) {
         String itemName = input.getItem().toString().toLowerCase();
         return itemName.contains("ore") || itemName.contains("raw_") ||
+                itemName.contains("dust") || itemName.contains("chunk") ||
                 itemName.contains("debris") || itemName.contains("scrap");
     }
 }
